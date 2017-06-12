@@ -1,12 +1,12 @@
 
-<div class='panel panel-primary'>
+<div class='panel panel-primary' style="background-color: lightgrey ">
     <div class='panel-heading'>
         {{pageTitle}}
     </div>
 
     <!-- Filter the Products   -->
     <div class='panel-body'>
-        <!--<div class='row'>
+        <div class='row'>
             <div class='col-md-2'>Filter by:</div>
             <div class='col-md-4'>
                 <input type='text' [(ngModel)]='listFilter' />
@@ -16,7 +16,7 @@
             <div class='col-md-6'>
                 <h3>Filtered by: {{listFilter}} </h3>
             </div>
-        </div>-->
+        </div>
 
         <!--<div class='has-error' *ngIf='errorMessage'>{{errorMessage}}</div>-->
 
@@ -25,7 +25,7 @@
                 <thead>
                     <tr>
                         <th>
-                            <button class='btn btn-primary'> Show Image </button>
+                            <button class='btn btn-primary' (click)="toggleImages();">{{showImages ? 'Hide' : 'Show' }} Image </button>
                         </th>
                         <th style="text-align:center;">Product</th>
                         <th style="text-align:center;">Code</th>
@@ -35,18 +35,23 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let product of products">
+                    <tr *ngFor="let product of products | productFilter:listFilter">
                         <td>
-                            <img [src]='product.imageUrl'[style.width.px]='100' 
-                                 [style.margin.px]='10'>
+                            <a [routerLink]="['/product', product.id]">
+                                <img *ngIf="showImages"
+                                [title]="product.description"
+                                [src]='product.imageUrl'
+                                [style.width.px]='100' 
+                                [style.margin.px]='10'>
+                            </a>
                         </td>
-                        <td><a>{{product.name}}</a>
+                        <td><a [routerLink] = "['/product', product.id]">{{product.name}}</a>
                         </td>
                         <td>{{product.code}}</td>
                         <td>{{product.releaseData}}</td>
-                        <td>{{product.price}}</td>
+                        <td>{{product.price | currency:'USD' :true: '1.2-2'}}</td>
                         <td>
-                            {{product.starRating}}
+                            <ai-star [rating]='product.starRating' (notify)="onNotify($event);" ></ai-star>
                        </td>
                     </tr>
                 </tbody>

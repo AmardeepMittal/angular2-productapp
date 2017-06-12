@@ -19,7 +19,7 @@ export const PRODUCTS: Product[] = [
         imageUrl: 'https://images-na.ssl-images-amazon.com/images/G/01/electronics/LG/Aplus2012/cs460.jpg',
         category: 'Electronics'
     },{
-        id:1,
+        id:2,
         name: 'Sony UHD TV',
         code: 'E2',
         description: 'Sony 65inch UHD TV',
@@ -29,7 +29,7 @@ export const PRODUCTS: Product[] = [
         imageUrl: 'https://heavyeditorial.files.wordpress.com/2015/11/sony-cm-4k.jpg?quality=65&strip=all&strip=all',
         category: 'Electronics'
     },{
-        id:1,
+        id:3,
         name: 'Sony UHD Curved TV',
         code: 'E3',
         description: 'Sony 65inch UHD Curved TV',
@@ -39,7 +39,7 @@ export const PRODUCTS: Product[] = [
         imageUrl: 'https://heavyeditorial.files.wordpress.com/2015/11/sony-cm-4k.jpg?quality=65&strip=all&strip=all',
         category: 'Electronics'
     },{
-        id:1,
+        id:4,
         name: 'Samsung OLED TV',
         code: 'E4',
         description: 'Samsung 65inch OLED TV',
@@ -50,7 +50,7 @@ export const PRODUCTS: Product[] = [
         category: 'Electronics'
     },
     {
-        id:1,
+        id:5,
         name: 'Samsung LCD Flat Screen TV',
         code: 'E5',
         description: 'Samsung LCD Flat Screen TV',
@@ -63,7 +63,7 @@ export const PRODUCTS: Product[] = [
 
 
     {
-        id: 1,
+        id: 6,
         name: 'Leaf Rake',
         code: 'F1',
         description: 'Leaf rake with 48-inch wooden handle.',
@@ -73,7 +73,7 @@ export const PRODUCTS: Product[] = [
         imageUrl: 'http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png',
         category: 'Farming'
     }, {
-        id: 1,
+        id: 7,
         name: 'Garden Cart',
         code: 'F2',
         description: '15 gallon capacity rolling garden cart',
@@ -83,7 +83,7 @@ export const PRODUCTS: Product[] = [
         imageUrl: 'http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png',
         category: 'Farming'
     }, {
-        id: 1,
+        id: 8,
         name: 'Hammer',
         code: 'F3',
         description: 'Curved claw steel hammer',
@@ -93,7 +93,7 @@ export const PRODUCTS: Product[] = [
         imageUrl: 'http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png',
         category: 'Farming'
     }, {
-        id: 1,
+        id: 9,
         name: 'Saw',
         code: 'F4',
         description: '15-inch steel blade hand saw',
@@ -103,14 +103,14 @@ export const PRODUCTS: Product[] = [
         imageUrl: 'http://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png',
         category: 'Farming'
     }, {
-        id: 1,
-        name: 'Samsung LCD Flat Screen TV',
-        code: 'F5',
-        description: 'Samsung LCD Flat Screen TV',
+        id: 10,
+        name: 'Video Game Controller',
+        code: 'E6',
+        description: 'Video Game Controller',
         price: 35.87,
         releaseData: '02/12/2012',
         starRating: 4.6,
         imageUrl: 'http://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png',
-        category: 'Farming'
+        category: 'Electronics'
     }
 ];

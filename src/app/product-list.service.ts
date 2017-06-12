@@ -12,6 +12,10 @@ export class ProductService {
         return PRODUCTS;
     }
 
+    getProductById(id: number){
+        return PRODUCTS.find( x => x.id === id);
+    }
+
     getProductsByCat(id: number) : Product[]{
         let category: Category = this.getCategoryName(id);
        return this.getProducts().filter( x => x.category === category.name)
