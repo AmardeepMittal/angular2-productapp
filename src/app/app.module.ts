@@ -10,6 +10,7 @@ import { ProductListComponent } from "app/product-list.component";
 import { ProductDetailComponent } from "app/product-detail.component";
 import { ProductFilterPipe } from "app/product.filter";
 import { SharedModule } from "app/shared/shared.module";
+import { HttpModule } from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SharedModule } from "app/shared/shared.module";
     BrowserModule,
     AppRouterModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    HttpModule
   ],
   providers: [ ProductService ],
   bootstrap: [AppComponent]
