@@ -6,30 +6,22 @@ import { Product, Category } from "app/app.models";
 import { PRODUCTS, CATEGORIES } from "app/mockdata";
 import { Http, Response } from '@angular/http';
 
-import 'rxjs/add/operator/map'
-import 'rxjs/add/operator/catch'
-import 'rxjs/add/operator/do'
-import 'rxjs/add/operator/delay';
-import 'rxjs/add/operator/concatMap';
-import 'rxjs/add/operator/filter';
-
 import { Observable } from "rxjs/Observable";
 import 'rxjs/Rx'; 
 
 @Injectable()
 export class ProductService {
 
-    private _url ='/src/app/data/products.json';
+    private _url ='/api/products/products.json';
     products: Product[] = null;
 
     constructor(private _http:Http ){   
-
     }
 
     getProducts(): Observable<Product[]> {
          return this._http.get(this._url)
-                 .map((resp: Response) =>  <Product[]>resp.json()  )
-                 .delay(7000);
+                 .map((resp: Response) =>  <Product[]>resp.json()  );
+                 //.delay(7000);
 
         // return new Observable<Product[]>(subscriber => {
         //     setTimeout(
